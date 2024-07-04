@@ -1,0 +1,13 @@
+syntax = "proto3";
+package simplepkg;
+
+option go_package="./simplepkg";
+message SimpleMessage{
+    int32 id=1;
+    bool is_simple = 2;
+    string name=3;
+    repeated int32 simple_list=4;
+}
+
+
+//how to execute protoc -I=src/ --go_out=src/simple src/simple/simple.proto
